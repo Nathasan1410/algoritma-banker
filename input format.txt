@@ -1,0 +1,67 @@
+## Format
+P : x       ## Jumlah Program
+R : x       ## Jumlah Resource
+Ava :       ## Resource Available
+[x, x, x]   #### Jumlah x sesuai dengan Jumlah Resource, x = resource yang tersedia
+All :       ## Allocation Resource
+[x ,x ,x]
+[y ,y ,y]   #### Jumlah Allocation sesuai dengan Jumlah Program
+[z ,z ,z]   #### x,y,z = resource yang dibutuhkan
+Max :
+[x ,x ,x]
+[y ,y ,y]   #### Jumlah Max sesuai dengan Jumlah Program
+[z ,z ,z]   #### x,y,z = resource maksimum yang dibutuhkan
+
+## Case :
+
+Program total : 3
+Resource total : 3
+Available : 10,8,9
+Allocation : 
+{ 
+    1 : [2,3,2]
+    2 : [4,5,2]
+    3 : [1,0,1]
+}
+Max : 
+{ 
+    1 : [4,5,3]
+    2 : [6,7,4]
+    3 : [3,2,3]
+}
+
+## Input :
+
+P : 3
+R : 3
+Ava :
+10,8,9
+All :
+2,3,2
+4,5,2
+1,0,1
+Max :
+4,5,3
+6,7,4
+3,2,3 
+
+Lebih gampang dibaca program :
+p       ## Jumlah Program   >> line 1
+r       ## Jumlah Resource  >> line 2
+[a, a, a]   ####Resource Available, Jumlah x sesuai dengan Jumlah Resource, x = resource yang tersedia  >> line 3
+[x1 ,x1 ,x1]   ## Allocation Resource
+[y1 ,y1 ,y1]   #### Jumlah Allocation sesuai dengan Jumlah Program
+[z1 ,z1 ,z1]   #### x,y,z = resource yang dibutuhkan
+[x2 ,x2 ,x2]   ## Max Resource
+[y2 ,y2 ,y2]   #### Jumlah Max sesuai dengan Jumlah Program
+[z2 ,z2 ,z2]   #### x,y,z = resource maksimum yang dibutuhkan
+
+3
+3
+10,8,9
+2,3,2
+4,5,2
+1,0,1
+4,5,3
+6,7,4
+3,2,3 

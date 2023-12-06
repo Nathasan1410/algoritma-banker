@@ -1,0 +1,79 @@
+Banker's Algorithm
+
+Variabel
+
+Available : [Input] total memori yang bisa dipake/total memori kosong
+
+( A : 5, B : 7, C : 4, D : 6)
+
+Available for Work : Available - Total Allocation
+Allocation : [Input] total memori yang lagi dipake
+
+[
+P1 : (A : 1, B : 2, C : 8, D : 3),
+P2 : (A : 5, B : 3, C : 5, D : 2)
+P3... ]
+
+Max : [Input] memori maksimal yang dipake
+
+[
+P1 : (A : 1, B : 2, C : 8, D : 3),
+P2 : (A : 5, B : 3, C : 5, D : 2)
+P3... ]
+
+Need : Max - Allocation
+Aplikasi (S1, S2, S3) : Program yang mendemand resource komputer
+Resource (R1,R2,R3 or A B C D) : Resource yang dimiliki komputer
+
+## INPUT
+
+> OPEN file test case
+> READ isi file test case
+> IF file tidak sesuai dengan format :	#Base Case
+RETURN "File tidak dapat dibaca"
+> INPUT total Aplikasi, total Resource
+> INPUT Available
+> INPUT Allocation, Max
+
+## INIT
+
+> IF LEN Allocation >= LEN Max :	#Base Case
+RETURN "Data Invalid!"
+> Total Allocation = SUM Allocation
+> Available for work = Available - Total Allocation
+> IF Available for work < 0:		#Base Case
+RETURN "Proses mengalami Deadlock"
+> Need = Max - Allocation
+
+## MAIN
+
+CHECK apakah masih ada program yang masih tersisa
+
+### Idea Scrap :
+>IF gaada program udah abis :		##Base Case
+print("Program berjalan tanpa Deadlock")
+END								##Program Selesai
+
+> ELSE :				## Recursive Function
+x = CALL Banker Function
+> IF x == True :
+CALL main		
+
+## BANKER FUNCTION (bagian ini mungkin better dijadiin function)
+
+> FOR program IN Need : 
+check ada program yang bisa dikerjakan enggak
+
+### Idea Scrap (maybe dijadiin function?)
+
+>> IF Need <= Available for work :
+Available = Available + Program_Allocation
+DEL Program FROM Need, Allocation, Max
+PRINT tabel
+STOP
+RETURN TRUE
+> ELSE ga ketemu :
+PRINT ("Program mengalami Deadlock")
+RETURN FALSE
+
+## tabel Function (idk mau bikin ato enggak, ide doang)
