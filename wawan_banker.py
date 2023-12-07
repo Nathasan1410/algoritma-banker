@@ -2,7 +2,7 @@ print("DIBUAT MODE COLLAPSE UNTUK BISA JALANKAN PROGRAM")
 print()
 print("-----BANKER ALGORITHM-----")
 print("PROGRAM INI MEMERLUKAN INPUTAN>>> INSTANCE, JumlahProses, Allocation, MAX")
-print("Disusun: Himawan Prayogo")
+print("Disusun: Kelompok 1")
 print()
 try:
     jinstance=int(input("Masukkan jumlah Instance:"))  #acuan
