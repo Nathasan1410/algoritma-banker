@@ -1,3 +1,5 @@
+# Banker Algorithm By Kelompok 1
+
 import copy
 
 class open_file :
