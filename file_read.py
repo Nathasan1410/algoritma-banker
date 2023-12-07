@@ -18,7 +18,7 @@ class open_file :
             return f.readlines()     
 
         except:                           
-            print(f"File '{filename}' tidak ditemukan!")
+            print(f"'{filename}' tidak ditemukan!")
             return False        
 
     def str_to_int (self, data, address):   
