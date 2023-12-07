@@ -1,3 +1,5 @@
+#Disusun Kelompok 1
+
 from file_read import open_file
 import copy
 
